@@ -1,0 +1,136 @@
+.body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1b1b1c;
+
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 40px 60px;
+    
+
+}
+.container .drop
+{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.10),
+    25px 35px 20px rgba(0, 0, 0, 0.10),
+    25px 30px 30px rgba(0, 0, 0, 0.10),
+    inset -20px -20px 25px rgba(255,255,255,0.6);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .drop:nth-child(1)
+{
+    border-radius: 36% 64% 61% 39% / 57% 53% 47% 43% ;
+}
+.container .drop:nth-child(2)
+{
+    border-radius:61% 39% 39% 61% / 52% 33% 67% 48%   ;
+}
+.container .drop:nth-child(3)
+{
+    border-radius: 47% 53% 45% 55% / 41% 33% 67% 59% ;
+}
+
+.container .drop:hover
+{
+    border-radius: 50%;
+    
+}
+.container .drop::before
+{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.container .drop::after
+{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.container .drop .content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+
+}
+.container .drop .content h2
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #eff0f4;
+    border-radius: 50%;
+    box-shadow:inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -5px -10px rgba(255,255,255,1),
+    15px 15px 10px rgba(0, 0, 0, 0.05),
+    15px 10px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: var(--clr);
+    font-family: 'poppins' , sans-serif;
+}
+.container .drop .content a
+{
+    position: relative;
+    padding: 10px;
+    background-color: var(--clr);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 500;
+    font-family: 'poppins' , sans-serif;
+    text-shadow: o 2px 2px rgba(0, 0, 0, 0.25);
+    opacity: 0.80;
+    transition: 0.5s;
+}
+.container .drop .content a:hover
+{
+    opacity: 2;
+}
+.container .drop .content a::before
+{
+    content: '' ;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.3);
+}    
